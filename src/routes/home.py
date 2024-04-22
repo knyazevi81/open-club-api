@@ -5,12 +5,12 @@ from fastapi.templating import Jinja2Templates
 from pathlib import Path
 
 route = APIRouter(tags=['home'])
-BASE_DIR = Path(__file__).resolve()
+BASE_DIR = Path(__file__).parent
 templates = Jinja2Templates(directory=str(Path(BASE_DIR, "templates")))
 
 @route.get("/home", response_class=HTMLResponse)
-def home_tasks(requets: Request):
+def home_tasks(request: Request):
     return templates.TemplateResponse(
-        request=requets, name="home.html"
+        request=request, name="home.html"
     )
 
