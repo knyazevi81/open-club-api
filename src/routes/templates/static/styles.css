@@ -13,7 +13,7 @@
 body {
   background-color: var(--black);
   color: #ddd;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 /* Style the navigation menu */
@@ -71,8 +71,10 @@ body {
   background-clip: border-box;
   border: 0.5px solid #555351;
   border-radius: 16px;
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  justify-content: center;
 }
 
 .card__header {
@@ -85,4 +87,7 @@ body {
   background-clip: border-box;
   border: 0.5px solid #555351;
   border-radius: 16px 16px 0 0;
+}
+.card__header.p {
+  justify-items: center;
 }
