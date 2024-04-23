@@ -1,5 +1,7 @@
 :root {
-    --black: #212121;
+    --black: #17212b;
+    --w-black: #212b35;
+    --b-black: #111920;
     --yellow: #c79d5d;
 
     --w-container: 1440px;
@@ -7,24 +9,34 @@
     --space: "Space Mono", monospace;
 }
 
+
+body {
+  background-color: var(--black);
+  color: #ddd;
+  font-size: 50px;
+}
+
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--b-black);
   position: relative;
+  border: 1px solid #555351;
+  border-radius: 0 0 16px 16px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
+  border: 1px solid #555351;
 }
 
 /* Style navigation menu links */
 .topnav a {
   color: white;
-  padding: 14px 16px;
+  padding: 5px 67px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 80px;
   display: block;
 }
 
@@ -47,4 +59,30 @@
 .active {
   background-color: var(--black);
   color: white;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--w-black);
+  background-clip: border-box;
+  border: 0.5px solid #555351;
+  border-radius: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #0000;
+  background-clip: border-box;
+  border: 0.5px solid #555351;
+  border-radius: 16px 16px 0 0;
 }
