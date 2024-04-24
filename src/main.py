@@ -20,7 +20,8 @@ from fastapi.staticfiles import StaticFiles
 
 from pathlib import Path
 import sys
-sys.path.append(str(Path(Path().resolve, "/routes")))
+
+sys.path.append(str(Path(Path().resolve(), "/routes")))
 
 from routes.home import route as main_menue
 import os
