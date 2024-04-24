@@ -34,7 +34,7 @@ if USE_NGROK:
     from pyngrok import ngrok
 
     # https://dashboard.ngrok.com/get-started/your-authtoken
-    ngrok.set_auth_token("ng") 
+    ngrok.set_auth_token("a") 
 
     public_url = ngrok.connect(PORT).public_url
     print(f"ngrok tunnel {public_url}/home")
@@ -43,8 +43,8 @@ app.mount("/static", StaticFiles(directory="routes/templates/static"), name="sta
 
 app.include_router(main_menue)
 
-if __name__ == '__main__':
-    print(f"API running {HOST}:{PORT}")
-    uvicorn.run(app, host=HOST, port=PORT)
+#if __name__ == '__main__':
+#    print(f"API running {HOST}:{PORT}")
+#    uvicorn.run(app, host=HOST, port=PORT)
 
 
