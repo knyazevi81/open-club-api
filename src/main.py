@@ -17,6 +17,11 @@ app.include_router(main_menue)
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
+
+from pathlib import Path
+import sys
+sys.path.append(str(Path(Path().resolve, "/routes")))
+
 from routes.home import route as main_menue
 import os
 
