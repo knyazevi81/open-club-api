@@ -21,7 +21,7 @@ from .routes import home
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="routes/templates/static"), name="static")
+app.mount("/static", StaticFiles(directory="src/routes/templates/static"), name="static")
 
 app.include_router(home.route)
 
