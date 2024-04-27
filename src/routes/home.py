@@ -14,3 +14,13 @@ def home_tasks(request: Request):
         request=request, name="home.html"
     )
 
+
+@route.get("/mock")
+def mock_task():
+    return {
+    "data": {
+        "clubName": "<p>Parus</p>",
+        "clubId": "<p>102-2</p>",
+        "ClubPm": "<p>Khasan</p>"
+    }
+}
