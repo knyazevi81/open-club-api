@@ -17,11 +17,9 @@ app.include_router(main_menue)
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.staticfiles import StaticFiles
+from .routes import home
 
 from fastapi.middleware.cors import CORSMiddleware
-
-from routes.home import route as main_menue
 
 app = FastAPI()
 
@@ -37,9 +35,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount('/static', StaticFiles(directory="routes/templates/static"), name="static")
 
-app.include_router(main_menue)
+app.mount("/static", StaticFiles(directory="src/routes/templates/static"), name="static")
+
+app.include_router(home.route)
 
 #if __name__ == '__main__':
 #    print(f"API running {HOST}:{PORT}")
