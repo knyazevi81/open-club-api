@@ -27,6 +27,7 @@ class Club(Base):
     club_adress = Column(String)
     club_id = Column(String)
     club_pm = Column(Integer , ForeignKey("users.id"))
+    status = Column(String)
     pm = relationship("User", back_populates="clubs")
 
 
